@@ -776,8 +776,10 @@ img {
 .map {
   width: 347px;
   height: 213px;
-  background-color: #000;
-  border-radius: 4px;
+}
+
+.map__element {
+  border-radius: 10px;
 }
 
 @media (max-width: 1200px) {
