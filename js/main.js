@@ -46,3 +46,4 @@ const swiper = new Swiper('.swiper-container', {
         myMap.geoObjects
         .add(myPlacemark);
 });
+$('.parallax-window').parallax({imageSrc: '../img/newsletter-bg.jpeg'});

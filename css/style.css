@@ -790,10 +790,6 @@ img {
 .newsletter {
   position: relative;
   padding: 98px 0 87px;
-  background-image: url(../img/newsletter-bg.jpeg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .newsletter::before {
@@ -874,6 +870,11 @@ img {
   border: none;
   background-color: #EC1F46;
   color: #ffffff;
+}
+
+.parallax-window {
+  min-height: 100%;
+  background: transparent;
 }
 
 @media (max-width: 1200px) {
