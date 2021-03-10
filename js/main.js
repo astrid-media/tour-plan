@@ -36,7 +36,7 @@ const swiper = new Swiper('.swiper-container', {
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/icon-place.png',
+            iconImageHref: 'img/icon-place.png',
             // Размеры метки.
             iconImageSize: [30, 30],
             // Смещение левого верхнего угла иконки относительно
