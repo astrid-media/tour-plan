@@ -59,4 +59,4 @@ const reviewSlider = new Swiper('.reviews-slider', {
         myMap.geoObjects
         .add(myPlacemark);
 });
-$('.parallax-window').parallax({imageSrc: '../img/newsletter-bg.jpeg'});
+$('.parallax-window').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
