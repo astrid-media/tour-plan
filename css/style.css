@@ -1277,6 +1277,9 @@ img {
   .map {
     width: 100%;
   }
+  .newsletter {
+    padding-top: 76px;
+  }
   .newsletter-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1289,7 +1292,10 @@ img {
             align-items: flex-start;
   }
   .newsletter-title {
-    margin-bottom: 17px;
+    margin-bottom: 37px;
+  }
+  .parallax-window {
+    min-height: 319px;
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
@@ -1302,13 +1308,13 @@ img {
   }
   .reviews-slider__button--prev {
     left: 50%;
-    margin-left: -65px;
+    margin-left: -85px;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
   }
   .reviews-slider__button--next {
     right: 50%;
-    margin-right: -65px;
+    margin-right: -85px;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
