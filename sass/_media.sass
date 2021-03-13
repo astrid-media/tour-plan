@@ -13,6 +13,8 @@
   .card
     width: 230px
     height: 230px
+  .first-info
+    padding: 27px 21px 30px 17px
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -57,6 +59,9 @@
   .card
     width: 340px
     height: 250px
+  .packages
+    &-advisor
+      grid-template-columns: repeat(2, 50%)
 @media (max-width: 768px)
   .container
     max-width: 760px
@@ -145,7 +150,26 @@
   .card
     width: 49%
     height: 255px
-
+  .packages
+    &-advisor
+      width: 95%
+      &-item
+        min-height: 490px
+        &__booking-price
+          row-gap: 15px
+          align-items: center
+          grid-template-columns: 2fr 4fr
+        &__price-old
+          grid-column: 1/2
+          margin: 0
+        &__button
+          grid-column: 1/3
+  .first-description
+    margin-bottom: 20px
+  .first-booking
+    margin-bottom: 20px
+  .first-title
+    margin-bottom: 15px
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -168,3 +192,16 @@
       line-height: 38px
   .card
     width: 100%
+  .packages
+    &-advisor
+      display: block
+      margin: auto
+      &-item
+        height: auto
+        margin-bottom: 20px
+        &:nth-child(1)
+          display: block
+        &__image
+          max-height: 250px
+        &__booking-price
+          grid-template-columns: 2fr 10fr
