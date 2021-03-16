@@ -15,6 +15,9 @@
     height: 230px
   .first-info
     padding: 27px 21px 30px 17px
+  .footer
+    &__input
+      flex-basis: 100%
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -62,6 +65,34 @@
   .packages
     &-advisor
       grid-template-columns: repeat(2, 50%)
+  .footer
+    &-wrapper
+      grid-template-columns: repeat(7,1fr)
+      row-gap: 38px
+    &__logo
+      grid-row: 1 / 2
+      grid-column: 1 / 3
+    &__social
+      &-network
+        grid-row: 1 / 2
+        grid-column: span 4
+        align-self: center
+    &__categories
+      grid-row: 2 / 3
+      grid-column: span 2
+    &__legal
+      grid-column: span 2
+    &__additional
+      grid-column: span 3
+    &__contact
+      &-detail
+        grid-row: 3
+        grid-column: span 5
+      &-form
+        grid-row: 4
+        grid-column: span 5
+    &__input
+      flex-basis: 49%
 @media (max-width: 768px)
   .container
     max-width: 760px
@@ -170,6 +201,13 @@
     margin-bottom: 20px
   .first-title
     margin-bottom: 15px
+  .footer
+    &__input
+      flex-basis: 100%
+    &-wrapper
+      column-gap: 20px
+    &-copyright
+      padding-top: 63px
 @media (max-width: 576px)
   .logo
     width: 99px
@@ -205,3 +243,46 @@
           max-height: 250px
         &__booking-price
           grid-template-columns: 2fr 10fr
+  .footer
+    padding-top: 69px
+    padding-bottom: 21px
+    &-wrapper
+      grid-template-columns: 1fr
+    &__logo
+      grid-row: 1
+      grid-column: 1
+    &__social
+      &-network
+        grid-row: 2
+        grid-column: 1
+    &__additional
+      grid-row: 4
+      grid-column: 1
+    &__categories
+      grid-row: 3
+      grid-column: 1
+    &__legal
+      grid-row: 5
+      grid-column: 1
+    &__contact
+      &-detail
+        grid-row: 6
+        grid-column: 1
+      &-form
+        grid-row: 7
+        grid-column: 1
+    &-copyright
+      flex-wrap: wrap
+      padding-top: 30px
+      justify-content: flex-start
+      &__ul
+        flex-basis: 100%
+        justify-content: flex-start
+        margin-bottom: 10px
+      &__social
+        position: static
+    &__button
+      order: 1
+    &__info
+      flex-basis: 100%
+      margin-bottom: 15px
