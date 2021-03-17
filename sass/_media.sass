@@ -97,9 +97,45 @@
   .container
     max-width: 760px
     width: 92%
+  body
+    padding-top: 78px
   .navbar
-    &-menu, &__search, &__user
+    &--mobile
+      &--fixed
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        z-index: 99
+    &-bottom
       display: none
+      position: fixed
+      left: 0
+      right: 0
+      bottom: 0
+      top: 78px
+      padding-top: 30px
+      &--visible
+        display: block
+    &-menu
+      flex-direction: column
+      &__item
+        margin-bottom: 20px
+        &--mobile
+          &--visible
+            display: flex
+    &__user, &__search
+      &--mobile
+        &--hidden
+          display: none
+        &--visible
+          display: flex
+    &__user
+      flex-direction: column
+      justify-content: center
+    &__search
+      margin-top: 7px
+      margin-bottom: 19px
     &-top
       &__menu-button
         display: flex
@@ -112,12 +148,22 @@
         justify-content: space-between
         flex-direction: column
         cursor: pointer
+        outline: none
+  .search
+    &__input
+      width: 240px
   .menu
     &-button
       &__line
         width: 16px
         height: 1px
         background-color: $text-color
+  .user
+    &__name
+      &--light
+        color: $light
+        margin-top: 20px
+        margin-left: 0
   .stars
     flex-basis: auto
   .hotel
@@ -174,7 +220,6 @@
           right: 50%
           margin-right: -85px
           transform: translate(50%, 0)
-
   .activities
     padding-top: 40px
     padding-bottom: 60px
@@ -255,14 +300,19 @@
       &-network
         grid-row: 2
         grid-column: 1
+        flex-direction: column
+        align-items: flex-start
+    &__title
+      &--inline
+        margin-bottom: 22px
     &__additional
       grid-row: 4
       grid-column: 1
     &__categories
-      grid-row: 3
+      grid-row: 5
       grid-column: 1
     &__legal
-      grid-row: 5
+      grid-row: 3
       grid-column: 1
     &__contact
       &-detail

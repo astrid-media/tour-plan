@@ -60,3 +60,8 @@ const reviewSlider = new Swiper('.reviews-slider', {
         .add(myPlacemark);
 });
 $('.parallax-window').parallax({imageSrc: 'img/newsletter-bg.jpeg'});
+
+var menuButton = document.querySelector(".menu-button");
+menuButton.addEventListener('click', function () {
+  document.querySelector(".navbar-bottom").classList.toggle("navbar-bottom--visible");
+});
