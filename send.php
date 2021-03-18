@@ -4,11 +4,11 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-// Переменные, которые отправляет пользователь
+if (isset($_POST['request'])) {
+   // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
-$email = $_POST['email'];
 
 // Формирование самого письма
 $title = "Новое обращение Best Tour Plan";
@@ -18,14 +18,6 @@ $body = "
 <b>Телефон:</b> $phone<br><br>
 <b>Сообщение:</b><br>$message
 ";
-
-// Формирование самого письма
-$title_email = "Новый e-mail с сайта Best Tour Plan";
-$body_email = "
-<h2>Новый e-mail</h2>
-<b>E-mail:</b> $email
-";
-
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -50,10 +42,7 @@ try {
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;
-$mail->Body = $body;  
-$mail->Subject = $title_email;
-$mail->Body = $body_email;  
-  
+$mail->Body = $body;    
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 
@@ -63,6 +52,56 @@ else {$result = "error";}
     $result = "error";
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
+header('Location: thankyou.html'); 
+
+} else if (isset($_POST['subscribe'])) {
+    // Отображение результата
+
+
+// Переменные, которые отправляет пользователь
+$email = $_POST['email'];
+
+// Формирование самого письма
+$title_email = "Новый E-mail Best Tour Plan";
+$body_email = "
+<h2>Новый E-mail</h2>
+<b>E-mail:</b> $email<br>
+";
+
+// Настройки PHPMailer
+$msg = new PHPMailer\PHPMailer\PHPMailer();
+try {
+    $msg->isSMTP();   
+    $msg->CharSet = "UTF-8";
+    $msg->SMTPAuth   = true;
+    // $mail->SMTPDebug = 2;
+    $msg->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
+
+    // Настройки вашей почты
+    $msg->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
+    $msg->Username   = 'botyan-veronika@yandex.ru'; // Логин на почте
+    $msg->Password   = ''; // Пароль на почте
+    $msg->SMTPSecure = 'ssl';
+    $msg->Port       = 465;
+    $msg->setFrom('botyan-veronika@yandex.ru', 'Вероника Волкова'); // Адрес самой почты и имя отправителя
+
+    // Получатель письма
+    $msg->addAddress('botyanveronika@gmail.com');  
+
+// Отправка сообщения
+$msg->isHTML(true);
+$msg->Subject = $title_email;
+$msg->Body = $body_email;    
+
+// Проверяем отравленность сообщения
+if ($msg->send()) {$result_email = "success";} 
+else {$result_email = "error";}
+
+} catch (Exception $e_email) {
+    $result_email = "error";
+    $status_email = "Сообщение не было отправлено. Причина ошибки: {$msg->ErrorInfo}";
+}
 
 // Отображение результата
-header('Location: thankyou.html');
+header('Location: thankyou.html'); 
+}
