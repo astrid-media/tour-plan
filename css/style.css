@@ -2145,5 +2145,9 @@ img {
         flex-basis: 100%;
     margin-bottom: 15px;
   }
+  .modal__dialog {
+    width: 95%;
+    padding: 15px 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
