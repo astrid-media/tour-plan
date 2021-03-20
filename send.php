@@ -4,11 +4,14 @@ require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
 
-if (isset($_POST['request'])) {
-   // Переменные, которые отправляет пользователь
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$email = $_POST['email'];
+
+if (empty($email)) {
+   // Переменные, которые отправляет пользователь
+
 
 // Формирование самого письма
 $title = "Новое обращение Best Tour Plan";
@@ -54,12 +57,10 @@ else {$result = "error";}
 }
 header('Location: thankyou.html'); 
 
-} else if (isset($_POST['subscribe'])) {
-    // Отображение результата
-
+} else {
 
 // Переменные, которые отправляет пользователь
-$email = $_POST['email'];
+
 
 // Формирование самого письма
 $title_email = "Новый E-mail Best Tour Plan";

@@ -391,6 +391,13 @@ img {
   outline: none;
 }
 
+.back-home {
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+}
+
 .navbar {
   background-color: #fff;
 }
