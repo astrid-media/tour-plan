@@ -34,7 +34,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'botyan-veronika@yandex.ru'; // Логин на почте
-    $mail->Password   = '1804043nika'; // Пароль на почте
+    $mail->Password   = ''; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('botyan-veronika@yandex.ru', 'Вероника Волкова'); // Адрес самой почты и имя отправителя
@@ -81,7 +81,7 @@ try {
     // Настройки вашей почты
     $msg->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
     $msg->Username   = 'botyan-veronika@yandex.ru'; // Логин на почте
-    $msg->Password   = '1804043nika'; // Пароль на почте
+    $msg->Password   = ''; // Пароль на почте
     $msg->SMTPSecure = 'ssl';
     $msg->Port       = 465;
     $msg->setFrom('botyan-veronika@yandex.ru', 'Вероника Волкова'); // Адрес самой почты и имя отправителя
