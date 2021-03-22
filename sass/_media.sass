@@ -17,7 +17,8 @@
     padding: 27px 21px 30px 17px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
 @media (max-width: 992px)
   .container, .newsletter-wrapper
     max-width: 700px
@@ -108,7 +109,8 @@
         grid-row: 4
         grid-column: span 5
     &__input
-      flex-basis: 49%
+      &-group
+        flex-basis: 48%
     &__title
       &--mt
         &--1
@@ -268,7 +270,8 @@
     margin-bottom: 15px
   .footer
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &-wrapper
       column-gap: 20px
     &-copyright
@@ -281,10 +284,20 @@
       height: 250px
     &-slider
       margin-bottom: 20px
+    &-info
+      padding-top: 8px
+      padding-bottom: 38px
   .newsletter
     padding: 76px 0 83px 0
     &__title
       margin-bottom: 37px
+      font-size: 20px
+      line-height: 25px
+    &-title
+      &__strong
+        font-size: 30px
+        line-height: 38px
+        margin-top: 5px
   .subscribe
     width: 100%
   &-title
@@ -308,11 +321,24 @@
           max-height: 250px
         &__booking-price
           grid-template-columns: 2fr 10fr
+  .reviews
+    padding-bottom: 50px
+    &__title
+      font-size: 18px
+      line-height: 23px
+      padding: 0 38px
+      margin-bottom: 42px
+  .activities
+    &__title
+      font-size: 18px
+      line-height: 23px
+      margin-bottom: 36px
   .footer
     padding-top: 69px
     padding-bottom: 21px
     &-wrapper
       grid-template-columns: 1fr
+      row-gap: 32px
     &__logo
       grid-row: 1
       grid-column: 1
@@ -325,6 +351,12 @@
     &__title
       &--inline
         margin-bottom: 22px
+      &--mt
+        &--1
+          margin-top: 8px
+      &--mb
+        &--3
+          margin-bottom: 15px
     &__additional
       grid-row: 4
       grid-column: 1
@@ -335,6 +367,8 @@
       grid-row: 3
       grid-column: 1
       padding-left: 0
+    &__text
+      margin-top: 25px
     &__contact
       &-detail
         grid-row: 6
@@ -342,6 +376,7 @@
       &-form
         grid-row: 7
         grid-column: 1
+        padding-top: 8px
     &-copyright
       flex-wrap: wrap
       padding-top: 30px
@@ -352,6 +387,8 @@
         margin-bottom: 10px
       &__social
         position: static
+      &__item
+        margin-right: 10px
     &__button
       order: 1
     &__info

@@ -141,7 +141,7 @@
             <p class="hotel-description">
               В скором времени с вами свяжется наш менеджер!
             </p>
-            <a class="back-home" href="/homeworks/lesson-28"
+            <a class="back-home" href="/homeworks/lesson-29"
               >Вернуться на главную</a
             >
           </div>
@@ -250,12 +250,14 @@
           </div>
           <!-- /.footer__list -->
           <div class="footer__contact-detail">
-            <h3 class="footer__title footer__title--mb-3">Cantact Details</h3>
+            <h3 class="footer__title footer__title--mb--3 footer__title--mt--1">
+              Contact Details
+            </h3>
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
             <ul class="footer__ul">
-              <li class="footer__item footer__item--mb-2">
+              <li class="footer__item footer__item--mb--2">
                 <div class="footer__icon-wrapper">
                   <img
                     src="img/map-maker.svg"
@@ -266,7 +268,7 @@
                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United
                 States
               </li>
-              <li class="footer__item footer__item--mb-2">
+              <li class="footer__item footer__item--mb--2">
                 <div class="footer__icon-wrapper">
                   <img
                     src="img/footer-phone-call.svg"
@@ -279,7 +281,7 @@
                 pm) <br />
                 Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
               </li>
-              <li class="footer__item footer__item--mb-2">
+              <li class="footer__item footer__item--mb--2">
                 <div class="footer__icon-wrapper">
                   <img
                     src="img/mail.svg"
@@ -293,26 +295,34 @@
           </div>
           <!-- /.footer__contact-detail -->
           <div class="footer__contact-form">
-            <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Your Full Name"
-                name="name"
-              />
-              <input
-                type="text"
-                class="input footer__input"
-                placeholder="Phone Number"
-                name="phone"
-              />
+            <h3 class="footer__title footer__title--mb--3">
+              Send us a message
+            </h3>
+            <form action="send.php" method="POST" class="footer__form form">
+              <div class="footer__input-group">
+                <input
+                  type="text"
+                  class="input footer__input"
+                  placeholder="Your Full Name"
+                  name="name"
+                  required
+                />
+              </div>
+              <div class="footer__input-group">
+                <input
+                  type="phone"
+                  class="input footer__input phone"
+                  placeholder="Phone Number*"
+                  name="phone"
+                  required
+                />
+              </div>
               <textarea
-                class="footer__message"
+                class="message footer__message"
                 placeholder="Message"
                 name="message"
               ></textarea>
-              <button class="button footer__button">Send</button>
+              <button class="button footer__button" name="request">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
           </div>
@@ -341,9 +351,54 @@
       </div>
       <!-- /.container -->
     </footer>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="icon: Close" />
+        </a>
+        <h3 class="modal__title modal__title--mb--3">Booking</h3>
+        <form action="booking.php" method="POST" class="modal__form form">
+          <input
+            type="text"
+            class="input modal__input"
+            placeholder="Your Full Name*"
+            name="name"
+            required
+          />
+          <input
+            type="phone"
+            class="input modal__input phone"
+            placeholder="Phone Number*"
+            name="phone"
+            required
+          />
+          <input
+            type="email"
+            class="input modal__input"
+            placeholder="Email*"
+            name="email"
+            required
+          />
+          <textarea
+            class="message modal__message"
+            placeholder="Message"
+            name="message"
+          ></textarea>
+          <button class="button modal__button" name="request">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal_modal__dialog -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
