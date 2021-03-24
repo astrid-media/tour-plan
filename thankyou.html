@@ -10,7 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&family=Nunito:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://api-maps.yandex.ru/2.1/?apikey=b154833f-8425-4714-81ef-d95eeeb7281c&lang=ru_RU"></script>
   </head>
@@ -18,7 +20,7 @@
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="#" class="logo">
+          <a href="/besttourplan" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -154,11 +156,12 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <img
-            src="img/vertikal-logo.png"
-            alt="Logo: Best Tour Plan"
-            class="logo footer__logo"
-          />
+          <a href="/besttourplan" class="footer__logo"
+            ><img
+              src="img/vertikal-logo.png"
+              alt="Logo: Best Tour Plan"
+              class="logo"
+          /></a>
           <div class="footer__list footer__categories">
             <h3 class="footer__title">ALL CATEGORIES</h3>
             <ul class="footer__ul">
@@ -218,11 +221,11 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="#" class="footer__link"
+              <a href="#" class="footer__link footer__link--bb--none"
                 ><img src="img/fb.svg" alt="Icon: Facebook" /></a
-              ><a href="#" class="footer__link"
+              ><a href="#" class="footer__link footer__link--bb--none"
                 ><img src="img/yt.svg" alt="Icon: YouTube" /></a
-              ><a href="#" class="footer__link"
+              ><a href="#" class="footer__link footer__link--bb--none"
                 ><img src="img/inst.svg" alt="Icon: Instagram"
               /></a>
             </div>
@@ -274,10 +277,34 @@
                     class="footer__icon"
                   />
                 </div>
-                Tel (business hours) : 269 1500 <br />
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00
-                pm) <br />
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <ul class="footer__item-wrapper">
+                  <li>
+                    Tel (business hours) :
+                    <a
+                      href="tel:269 1500"
+                      class="footer__link footer__link--bb--none"
+                      >269 1500</a
+                    >
+                  </li>
+                  <li>
+                    Tel (hotline) Monday - Saturday:
+                    <a
+                      href="tel:52-56-61-38"
+                      class="footer__link footer__link--bb--none"
+                      >52-56-61-38</a
+                    >
+                    (08:00 am – 20:00 pm)
+                  </li>
+                  <li>
+                    Tel (hotline) Sunday:
+                    <a
+                      href="tel:52-56-61-38"
+                      class="footer__link footer__link--bb--none"
+                      >52-56-61-38</a
+                    >
+                    (08:00 am – 14:00 pm)
+                  </li>
+                </ul>
               </li>
               <li class="footer__item footer__item--mb--2">
                 <div class="footer__icon-wrapper">
@@ -287,7 +314,9 @@
                     class="footer__icon"
                   />
                 </div>
-                cherly.lawson@example.com
+                <a class="footer__link" href="mailto:cherly.lawson@example.com"
+                  >cherly.lawson@example.com</a
+                >
               </li>
             </ul>
           </div>
@@ -308,7 +337,7 @@
               </div>
               <div class="footer__input-group">
                 <input
-                  type="phone"
+                  type="tel"
                   class="input footer__input phone"
                   placeholder="Phone Number*"
                   name="phone"
@@ -366,7 +395,7 @@
             required
           />
           <input
-            type="phone"
+            type="tel"
             class="input modal__input phone"
             placeholder="Phone Number*"
             name="phone"
@@ -397,6 +426,7 @@
     <script src="js/parallax.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
