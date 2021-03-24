@@ -1,3 +1,31 @@
+@media (min-width: 993px)
+  .navbar
+    &-menu
+      &__link
+        &:hover
+          border-bottom: 1px solid $primary
+  .booking
+    &__button
+      &:hover
+        box-shadow: 0 0 5px #a07474
+  .packages
+    &-advisor
+      &-item
+        &__button
+          &:hover
+            box-shadow: 0 0 5px #a07474
+  .card
+    &__button
+      &:hover
+        box-shadow: 0 0 5px #a07474
+  .footer
+    &__link
+      &:hover
+        border-bottom: 1px solid $primary
+      &--bb
+        &--none
+          &:hover
+            border-bottom: none
 @media (max-width: 1200px)
   .container
     max-width: 960px
@@ -305,6 +333,8 @@
         margin-top: 5px
   .subscribe
     width: 100%
+    &__input
+      max-width: 280px
   &-title
     font-size: 20px
     line-height: 25px

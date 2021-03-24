@@ -362,6 +362,10 @@ img {
   max-width: 100%;
 }
 
+a {
+  border-bottom: 1px solid transparent;
+}
+
 .input {
   background-color: #ffffff;
   border-radius: 4px;
@@ -912,8 +916,7 @@ img {
   font-size: 14px;
   line-height: 18px;
   margin-bottom: 5px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  border-radius: 4px;
 }
 
 .subscribe__input-group {
@@ -932,6 +935,7 @@ img {
   color: #ffffff;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  cursor: pointer;
 }
 
 .parallax-window {
@@ -1313,6 +1317,7 @@ img {
   border: none;
   border-radius: 4px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .packages-advisor-item__offer {
@@ -1476,6 +1481,12 @@ img {
 
 .footer__item--mb--2 {
   margin-bottom: 20px;
+}
+
+.footer__item-wrapper {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .footer__icon {
@@ -1666,6 +1677,30 @@ img {
   font-size: 12px;
   line-height: 15px;
   color: #E0E0E0;
+}
+
+@media (min-width: 993px) {
+  .navbar-menu__link:hover {
+    border-bottom: 1px solid #EC1F46;
+  }
+  .booking__button:hover {
+    -webkit-box-shadow: 0 0 5px #a07474;
+            box-shadow: 0 0 5px #a07474;
+  }
+  .packages-advisor-item__button:hover {
+    -webkit-box-shadow: 0 0 5px #a07474;
+            box-shadow: 0 0 5px #a07474;
+  }
+  .card__button:hover {
+    -webkit-box-shadow: 0 0 5px #a07474;
+            box-shadow: 0 0 5px #a07474;
+  }
+  .footer__link:hover {
+    border-bottom: 1px solid #EC1F46;
+  }
+  .footer__link--bb--none:hover {
+    border-bottom: none;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -2115,6 +2150,9 @@ img {
   }
   .subscribe {
     width: 100%;
+  }
+  .subscribe__input {
+    max-width: 280px;
   }
   -title {
     font-size: 20px;
