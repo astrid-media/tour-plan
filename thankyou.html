@@ -20,7 +20,7 @@
     <header class="navbar navbar--mobile--fixed">
       <div class="container">
         <div class="navbar-top">
-          <a href="/besttourplan" class="logo">
+          <a href="/best-tour-plan" class="logo">
             <img
               src="img/horizontal-logo.svg"
               alt="Logo: Best Tour Plan"
@@ -136,14 +136,14 @@
           <div class="hotel-info__text">
             <div class="hotel-wrapper">
               <h1 class="hotel-name hotel-info__name">
-                Спасибо, ваше сообщение отправлено!
+                Thank you for your message!
               </h1>
             </div>
             <!-- /.hotel-wrapper -->
             <p class="hotel-description">
-              В скором времени с вами свяжется наш менеджер!
+              As soon as we know something, we'll call you.!
             </p>
-            <a class="back-home" href="/besttourplan">Вернуться на главную</a>
+            <a class="back-home" href="/best-tour-plan">Back home</a>
           </div>
           <!-- /.hotel-info__left -->
         </div>
@@ -156,7 +156,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
-          <a href="/besttourplan" class="footer__logo"
+          <a href="/best-tour-plan" class="footer__logo"
             ><img
               src="img/vertikal-logo.png"
               alt="Logo: Best Tour Plan"
@@ -221,11 +221,20 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="#" class="footer__link footer__link--bb--none"
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                class="footer__link footer__link--bb--none"
                 ><img src="img/fb.svg" alt="Icon: Facebook" /></a
-              ><a href="#" class="footer__link footer__link--bb--none"
+              ><a
+                href="https://www.youtube.com/"
+                target="_blank"
+                class="footer__link footer__link--bb--none"
                 ><img src="img/yt.svg" alt="Icon: YouTube" /></a
-              ><a href="#" class="footer__link footer__link--bb--none"
+              ><a
+                href="https://www.instagram.com/"
+                class="footer__link footer__link--bb--none"
+                target="_blank"
                 ><img src="img/inst.svg" alt="Icon: Instagram"
               /></a>
             </div>
@@ -257,7 +266,7 @@
             <p class="footer__text">
               Feel free to contact us by phone, email or by our contact form
             </p>
-            <ul class="footer__ul">
+            <ul class="footer__ul footer__ul--pl--5">
               <li class="footer__item footer__item--mb--2">
                 <div class="footer__icon-wrapper">
                   <img
@@ -281,7 +290,7 @@
                   <li>
                     Tel (business hours) :
                     <a
-                      href="tel:269 1500"
+                      href="tel:2691500"
                       class="footer__link footer__link--bb--none"
                       >269 1500</a
                     >
@@ -289,7 +298,7 @@
                   <li>
                     Tel (hotline) Monday - Saturday:
                     <a
-                      href="tel:52-56-61-38"
+                      href="tel:52566138"
                       class="footer__link footer__link--bb--none"
                       >52-56-61-38</a
                     >
@@ -298,7 +307,7 @@
                   <li>
                     Tel (hotline) Sunday:
                     <a
-                      href="tel:52-56-61-38"
+                      href="tel:52566138"
                       class="footer__link footer__link--bb--none"
                       >52-56-61-38</a
                     >
@@ -330,7 +339,7 @@
                 <input
                   type="text"
                   class="input footer__input"
-                  placeholder="Your Full Name"
+                  placeholder="Your Full Name*"
                   name="name"
                   required
                 />
@@ -342,6 +351,7 @@
                   placeholder="Phone Number*"
                   name="phone"
                   required
+                  minlength="18"
                 />
               </div>
               <textarea
@@ -400,6 +410,7 @@
             placeholder="Phone Number*"
             name="phone"
             required
+            minlength="18"
           />
           <input
             type="email"

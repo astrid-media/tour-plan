@@ -51,11 +51,12 @@ function closeModal(event){
   modalDialog.removeClass("modal__dialog--visible");
 }
 $(document).on('keydown', function(e) {
-  if (e.keyCode == 27)
+  if (e.keyCode == 27) {
    var modalOverlay = $(".modal__overlay");
   var modalDialog = $(".modal__dialog");
   modalOverlay.removeClass("modal__overlay--visible");
   modalDialog.removeClass("modal__dialog--visible");
+}
 });
 
 
@@ -64,16 +65,23 @@ $(document).on('keydown', function(e) {
 $(".form").each(function () {
   $(this).validate({
   messages: {
-    name: "Please specify your name",
-    phone: "Please specify your phone number",
+    name: {
+      required: "Please specify your name",
+      minlength: "Name must be at least 2 symbols!"
+    },
+    phone: {
+     required: "Please specify your phone number",
+     minlength: "Please specify correct phone!"
+    },
     email: {
       required: "Please specify email address",
-      email: "Your email address must be in the format of name@domain.com"
+      email: "Your email address must be in the format of name@domain.com",
+      minlength: "Please specify at least 3 characters!"
     }
   }
 });
 });
-
 $('.phone').mask('+7 (999) 999-99-99');
+
 AOS.init();
 });

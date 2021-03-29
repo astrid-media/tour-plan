@@ -29,7 +29,7 @@
       &__booking
         margin-bottom: 24px
       &__info
-        padding: 30px 21px 25px 32px
+        padding: 27px 21px 25px 32px
       &__image
         object-fit: cover
         width: 100%
@@ -58,7 +58,7 @@
         margin-left: 15px
       &__booking-price
         display: grid
-        grid-template-columns: repeat(2,50%)
+        grid-template-columns: 60% 40%
         align-items: center
       &__price
         font-style: normal
@@ -68,7 +68,6 @@
           font-size: 14px
           line-height: 18px
           grid-column: 1/3
-          margin-bottom: 5px
         &-new
           font-weight: bold
           font-size: 24px
@@ -80,7 +79,7 @@
         font-size: 14px
         line-height: 19px
         background-color: $primary
-        padding: 10px 27px
+        padding: 10px 25px
         border: none
         border-radius: 4px
         color: $light
@@ -88,21 +87,24 @@
       &__offer
         position: absolute
         top: 26px
-        padding: 7px 12px
-        font-style: normal
+        padding: 4px 9px
         font-weight: 600
-        font-size: 12px
-        line-height: 15px
+        font-size: 8px
+        line-height: 10px
         color: $light
         background-color: $primary
         border-radius: 0px 4px 4px 0px
 // Отступы для элементов первого item
 .first
   &-info
-    padding: 47px 21px 30px 44px
+    padding: 36px 21px 30px 44px
   &-title
     margin-bottom: 27px
   &-description
-    margin-bottom: 34px
+    margin-bottom: 44px
   &-booking
     margin-bottom: 37px
+  &-offer
+    padding: 8px 20px 7px 12px
+    font-size: 12px
+    line-height: 15px
